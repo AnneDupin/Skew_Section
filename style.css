@@ -1,0 +1,75 @@
+.row {
+    max-width: 114rem; /* 16 pixel */
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.titre {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.conteneur {
+width: 75%;
+margin: 0 auto;
+box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1); /* x y flou */
+background-color: whitesmoke;
+border-radius: 3px;
+padding: 6rem;
+font-size: 1.6rem;
+transform: skewX(-12deg);
+}
+
+.conteneur_photo {
+width: 15rem;
+height: 15rem;
+float: left;
+shape-outside: circle(50% at 50% 50%); /* texte peut être autour de l'image */
+clip-path: circle(50% at 50% 50%);
+transform: translateX(-3rem) skewY(12deg);
+position: relative;
+}
+
+h3 {
+    color: #8bd303;
+}
+
+p {
+    color: #19381f;
+    font-family: 'Lato', 'sans-serif';
+}
+
+.imgGreen {
+    height: 100%;
+    transform: translateY(-7rem) scale(3.1);
+    transition: all .5s;
+}
+
+.conteneurTxt {
+    transform: skewX(12deg); /* Pour l'adapter au conteneur */
+}
+
+.figTitre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 20%);
+    color: #f8e143;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;    
+}
+
+.conteneur:hover .figTitre{
+opacity: 1;
+transform: translate(-50%, -50%);
+}
+
+.conteneur:hover .imgGreen {
+    transform: translateY(-7rem) scale(3.1);
+    filter: blur(3px) brightness(80%);
+}
